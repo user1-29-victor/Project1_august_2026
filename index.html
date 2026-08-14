@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Dashboard — Project</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container header-inner">
+                <div class="brand">
+                    <span class="logo" aria-hidden="true">▦</span>
+                    <h1 class="project-name">Project Dashboard</h1>
+                </div>
+                <nav class="top-nav" aria-label="Primary">
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="profile">
+                    <button class="btn ghost">Export</button>
+                    <img src="" alt="User avatar" class="avatar" aria-hidden="true" />
+                </div>
+            </div>
+        </header>
+
+        <main class="container main-grid">
+            <aside class="sidebar" aria-label="Sidebar">
+                <ul>
+                    <li class="active">Dashboard</li>
+                    <li>Reports</li>
+                    <li>Analytics</li>
+                    <li>Settings</li>
+                </ul>
+            </aside>
+
+            <section class="dashboard" id="overview">
+                <div class="hero">
+                    <h2>Welcome back</h2>
+                    <p class="muted">Here's a quick summary of your project.</p>
+                </div>
+
+                <div class="cards" aria-hidden="false">
+                    <article class="card">
+                        <h3>Users</h3>
+                        <p class="metric">1,248</p>
+                        <p class="muted">+4.2% since last week</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Active Services</h3>
+                        <p class="metric">8</p>
+                        <p class="muted">Stable</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Errors</h3>
+                        <p class="metric">3</p>
+                        <p class="muted">Investigating</p>
+                    </article>
+                </div>
+
+                <section class="panel" id="services">
+                    <h3>Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <strong>Auth Service</strong>
+                            <span class="muted">Running · 99.9%</span>
+                        </div>
+                        <div class="service-item">
+                            <strong>API Gateway</strong>
+                            <span class="muted">Running · 99.7%</span>
+                        </div>
+                        <div class="service-item">
+                            <strong>Worker</strong>
+                            <span class="muted">Idle · 0 errors</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <h3>Recent Activity</h3>
+                    <table class="activity-table" aria-describedby="recent-activity">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Event</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10:14</td>
+                                <td>Deployment succeeded</td>
+                                <td>Success</td>
+                            </tr>
+                            <tr>
+                                <td>09:32</td>
+                                <td>Backup completed</td>
+                                <td>Success</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <small>&copy; 2026 Project Dashboard</small>
+            </div>
+        </footer>
+    </body>
+</html>
