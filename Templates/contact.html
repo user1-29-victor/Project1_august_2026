@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --primary: #2f6fed;
+      --primary-dark: #1e4ec9;
+      --text: #1c2430;
+      --muted: #627086;
+      --border: #dfe7f3;
+      --shadow: rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #eef4ff, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .contact-card {
+      width: min(100%, 900px);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 20px 45px var(--shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 1.4fr;
+    }
+
+    .info-panel {
+      background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      padding: 48px 32px;
+    }
+
+    .info-panel h1 {
+      margin-top: 0;
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+
+    .info-panel p {
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0.9;
+      box-shadow: 0 0 10px rgba(255,255,255,0.7);
+    }
+
+    .form-panel {
+      padding: 40px 32px;
+    }
+
+    .form-panel h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+    }
+
+    .form-panel .subtitle {
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #f9fbff;
+      border-radius: 10px;
+      padding: 14px 15px;
+      font: inherit;
+      color: var(--text);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(47, 111, 237, 0.12);
+      background: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 720px) {
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .info-panel, .form-panel {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-card">
+    <div class="info-panel">
+      <h1>Let’s talk.</h1>
+      <p>
+        We’d love to hear about your project, ideas, or questions. Send us a message and
+        our team will get back to you as soon as possible.
+      </p>
+
+      <ul class="contact-list">
+        <li><span class="dot"></span> hello@example.com</li>
+        <li><span class="dot"></span> +1 (555) 123-4567</li>
+        <li><span class="dot"></span> 123 Business Street, Suite 200</li>
+      </ul>
+    </div>
+
+    <div class="form-panel">
+      <h2>Contact Us</h2>
+      <div class="subtitle">Fill out the form below and we’ll contact you shortly.</div>
+
+      <form>
+        <div class="row">
+          <div>
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" placeholder="John" />
+          </div>
+          <div>
+            <label for="last-name">Last Name</label>
+            <input id="last-name" type="text" placeholder="Doe" />
+          </div>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="john@example.com" />
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" placeholder="Project inquiry" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us a little about your project..."></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
